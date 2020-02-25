@@ -26,12 +26,12 @@ class TicTacToe {
             x.innerText = `X`;
             this.player1Info.classList.remove('yourTurn');
             this.player2Info.classList.add('yourTurn');
-            x.removeEventListener('click') //Here some problem
+            x.removeEventListener('click', avoidOverlap);
         } else {
             x.innerText = `O`;
             this.player1Info.classList.add('yourTurn');
             this.player2Info.classList.remove('yourTurn');
-            x.removeEventListener('click') //Here some problem
+            x.removeEventListener('click', avoidOverlap);
         }
     }
 }
@@ -43,41 +43,34 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    const inputs = document.getElementsByClassName('input');
+    const inputs = Array.from(document.getElementsByClassName('input'));
     const playerOneInput = document.getElementById('player-1-input-name');
     const playerTwoInput = document.getElementById('player-2-input-name');
     const startBtn = document.getElementById('start-btn');
-    const squares = Array.from(document.getElementsByClassName('square'));
-    const ttt = new TicTacToe();
+    let squares = Array.from(document.getElementsByClassName('square'));
+    let ttt = new TicTacToe();
 
-    /*inputs.forEach(input => 
+    inputs.forEach(input => 
         input.addEventListener('keyup', () => {
             if (playerOneInput.value.length > 0 && playerTwoInput.value.length > 0) {
-                ttt.startBtnAppears();
-            } else {
-                startBtn.classList.add('hide')
+                ttt.startBtnAppears()
+                } 
+                else {
+                    startBtn.classList.add('hide')
             };
-        });*/
-
-    playerOneInput.addEventListener('keyup', () => {
-        if (playerOneInput.value.length > 0 && playerTwoInput.value.length > 0) {
-            ttt.startBtnAppears();
-        } else (startBtn.classList.add('hide'));
-    });
-
-    playerTwoInput.addEventListener('keyup', () => {
-        if (playerOneInput.value.length > 0 && playerTwoInput.value.length > 0) {
-            ttt.startBtnAppears();
-        } else (startBtn.classList.add('hide'));
-    });
+        })
+    )
 
     startBtn.addEventListener('click', () => {
         ttt.startGame();
     });
 
     squares.forEach(square => {
-        square.addEventListener('click', (event) => {
-            ttt.writeSign(event.target);
+        square.addEventListener('click', avoidOverlap);
         });
-    });
+}
+
+function avoidOverlap(event) {
+    let ttt = new TicTacToe();
+    ttt.writeSign(event.target);
 }
