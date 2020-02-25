@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da&display=swap" rel="stylesheet">
     <title>Tic Tac Toe</title>
     <div id='title-div'>
         <h1 id='title'>Tic Tac Toe</h1>
@@ -12,9 +14,9 @@
 </head>
 <body>
     <div id='first-overlay'>
-        <h4>Enter your names</h4>
-        <p>Player X: <input type='text' id='player-1-input-name'></p>
-        <p>Player O: <input type='text' id='player-2-input-name'></p>
+        <h4>Enter player's names</h4>
+        <p>Player  <span class='sign'>X</span>: <input type='text' id='player-1-input-name' class='input'></p>
+        <p>Player  <span class='sign'>O</span>: <input type='text' id='player-2-input-name' class='input'></p>
         <button id='start-btn' class='hide'>Start</button>
     </div>
     <div id='second-overlay' class='hide'>
@@ -36,4 +38,3 @@
     </div>
 </body>
 </html>
-
