@@ -43,11 +43,21 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
+    const inputs = document.getElementsByClassName('input');
     const playerOneInput = document.getElementById('player-1-input-name');
     const playerTwoInput = document.getElementById('player-2-input-name');
     const startBtn = document.getElementById('start-btn');
     const squares = Array.from(document.getElementsByClassName('square'));
     const ttt = new TicTacToe();
+
+    /*inputs.forEach(input => 
+        input.addEventListener('keyup', () => {
+            if (playerOneInput.value.length > 0 && playerTwoInput.value.length > 0) {
+                ttt.startBtnAppears();
+            } else {
+                startBtn.classList.add('hide')
+            };
+        });*/
 
     playerOneInput.addEventListener('keyup', () => {
         if (playerOneInput.value.length > 0 && playerTwoInput.value.length > 0) {
