@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+    <div id='title-div'>
+        <h1 id='title'>Tic Tac Toe</h1>
+    </div>
+</head>
+<body>
+    <div id='first-overlay'>
+        <h4>Enter player's names</h4>
+        <p>Player  <span class='sign'>X</span>: <input type='text' id='player-1-input-name' class='input'></p>
+        <p>Player  <span class='sign'>O</span>: <input type='text' id='player-2-input-name' class='input'></p>
+    </div>
+    <div id='second-overlay' class='hide'>
+        <div id='players-info'>
+            <h5 id='player-1-info' class='yourTurn'>Player X: <span id='player-1-name'></span></h5>
+            <h5 id='player-2-info'>Player O: <span id='player-2-name'></span></h5>
+        </div>
+        <p id='winner-message' class='hide'>The winner is: <span id='actual-winner'></span></p>
+        <div id='square-board'>
+            <div id='square-1' class='square'></div>
+            <div id='square-2' class='square'></div>
+            <div id='square-3' class='square'></div>
+            <div id='square-4' class='square'></div>
+            <div id='square-5' class='square'></div>
+            <div id='square-6' class='square'></div>
+            <div id='square-7' class='square'></div>
+            <div id='square-8' class='square'></div>
+            <div id='square-9' class='square'></div>
+        </div>
+    </div>
+    <button id='start-btn' class='hide'>Start</button>
+    <button id='restart-btn' class='hide'>Restart</button>
+</body>
+</html>
+
