@@ -92,6 +92,8 @@ input {
     color: black;
     height: auto;
     width: fit-content;
+    margin-left: -10px;
+    margin-top: 20px;
 }
 
 #player-1-info {
@@ -102,6 +104,8 @@ input {
     color: black;
     height: auto;
     width: fit-content;
+    margin-left: -10px;
+    margin-top: 20px;
 }
 
 #winner-message, #draw-message {
