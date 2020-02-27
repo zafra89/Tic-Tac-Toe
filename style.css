@@ -29,7 +29,7 @@ html {
 }
 
 .yourTurn {
-    font-family: 'Gochi Hand';
+    font-family: 'Permanent Marker';
     justify-content: center;
     justify-items: center;
     border: 3px solid black;
@@ -46,14 +46,14 @@ h1 {
 }
 
 p {
-    font-family: 'Baloo Da';
-    font-size: 35px;
+    font-family: 'Permanent Marker';
+    font-size: 30px;
 }
 
 .sign {
     font-size: 45px;
     font-family: 'Permanent Marker';
-    text-shadow: -1px -1px chartreuse, 0 1px chartreuse, 1px 0 chartreuse, 0 -1px chartreuse;
+    text-shadow: -3px -1px chartreuse, 0 1px chartreuse, 1px 0 chartreuse, 0 -1px chartreuse;
 }
 h4 {
     font-family: 'Gochi Hand';
@@ -80,31 +80,14 @@ input {
 }
 
 #players-info {
-    margin-left: 20px;
-    margin-top: -20px;
-}
-
-#player-2-info {
-    font-family:'Permanent Marker';
-    font-size: 25px;
-    justify-content: center;
-    justify-items: center;
-    color: black;
-    height: auto;
-    width: fit-content;
-    margin-left: -10px;
-    margin-top: 20px;
-}
-
-#player-1-info {
     font-family: 'Permanent Marker';
-    font-size: 25px;
+    font-size: 32px;
     justify-content: center;
     justify-items: center;
     color: black;
     height: auto;
     width: fit-content;
-    margin-left: -10px;
+    margin-left: 20px;
     margin-top: 20px;
 }
 
